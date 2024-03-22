@@ -1,0 +1,266 @@
+:root {
+  --main-color: #F5F5F5;
+}
+.HomeContainer {
+  display: flex;
+  flex-direction: column;
+  max-width: 1280px;
+  margin: 0 auto;
+  height: 100%;
+  background-color: var(--main-color);
+
+  .filters {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    .bookSort button {
+      display: flex;
+      gap: 10px;
+      cursor: pointer;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 5px;
+      background-color: #3B5998;
+      color: #fff;
+      font-size: 1rem;
+      transition: background-color 0.3s ease;
+    }
+    .bookSearch {
+      display: flex;
+      gap: 10px;
+      input {
+        padding: 10px 20px;
+        border: none;
+        border-radius: 25px;
+        font-size: 1rem;
+      }
+      input:focus{
+        outline: none ;
+      }
+      :last-child {
+        padding: 10px 20px;
+        border: none;
+        border-radius: 5px;
+        background-color: #3B5998;
+        color: #fff;
+        font-size: 1rem;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+      }
+    }
+  }
+
+  .BookContainer {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  // Book detail page
+  .backButton {
+    width: fit-content;
+    border: none;
+    color: #aaa;
+    cursor: pointer;
+    margin: 5px 0;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+
+    &:hover {
+      background-color: #f5f5f5;
+      transform: translateX(-5px);
+    }
+    &:active {
+      transform: translateX(5px);
+    }
+  }
+  .BookDetails {
+    display: flex;
+    gap: 20px;
+    padding: 20px;
+    align-items: flex-start;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+
+    .BookImage {
+      width: 260px;
+      aspect-ratio: 4/6;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+
+    &:hover{
+      -webkit-filter: brightness(60%);
+    }
+  }
+
+    .BookDetails-info {
+      flex: 1;
+      display: flex;
+      height: 100%;
+      flex-direction: column;
+      justify-content: space-between;
+
+      h2 {
+        margin-bottom: 10px;
+        color: #333;
+      }
+
+      span {
+        color: #666;
+        margin: 1px 0;
+      }
+
+      p {
+        margin: 10px 0;
+        color: #555;
+      }
+    }
+    .book-actions {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      margin-top: 10px;
+
+      .action-button {
+        border: none;
+        cursor: pointer;
+        background-color: transparent;
+        transition: color 0.3s ease;
+        .action {
+          &:hover {
+            color: #3498db;
+          }
+        }
+        .delete {
+          &:hover {
+            color: #f00;
+          }
+        }
+      }
+    }
+    .bookInfo-edit {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      margin-top: 10px;
+    }
+    input,
+    select,
+    textarea {
+      padding: 10px;
+      border: 1px solid #ddd;
+      border-radius: 5px;
+      font-size: large;
+      font-weight: 400;
+      outline: none;
+      width: 100%;
+      box-sizing: border-box;
+      &::placeholder {
+        color: #ddd;
+      }
+      &:focus {
+        border: 2px solid #385667;
+      }
+    }
+    textarea {
+      resize: none;
+      height: 100px;
+    }
+
+    .user-details {
+      display: flex;
+      align-items: center;
+      gap: 5px;
+
+      img {
+        width: 40px;
+        height: 40px;
+        object-fit: cover;
+        border: 1px solid #fff;
+        border-radius: 50%;
+      }
+
+      p {
+        color: #888;
+        margin: 0;
+      }
+    }
+    .btn-collection {
+      display: flex;
+      align-self: flex-end;
+      gap: 10px;
+      margin-top: 10px;
+      button {
+        padding: 10px 20px;
+        border: none;
+        border-radius: 5px;
+        background-color: #9fa39f;
+        color: #fff;
+        font-size: 1rem;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+        &.confirm {
+          background-color: #3498db;
+          &:hover {
+            background-color: #2980b9;
+          }
+        }
+        &.cancel {
+          background-color: #f00;
+          &:hover {
+            background-color: #c0392b;
+          }
+        }
+      }
+    }
+  }
+}
+// Product.scss
+
+.product {
+  margin: 2.0rem;
+  position: relative;
+  width: 220px;
+  aspect-ratio: 4/6;
+  border-radius: 0.5rem;
+  background-color: #fff;
+  box-shadow: 0px 4px 6px #eaeaf1;
+  padding: 3px;
+  overflow: hidden;
+  outline: none;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+
+  &:hover {
+    background-color: #302f2f;
+    
+    
+    .product-image {
+      opacity: 0.2;
+      
+    }
+
+    .product-details {
+      opacity: 1;
+    }
+  }
+
+  .product-image {
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
+    border-radius: 0.5rem;
+    transition: opacity 0.3s ease;
+  }
+  .product-details {
+    position: absolute;
+    top: 70%;
+    left: 50%;
+    width: 100%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: #fff;
+    opacity: 0;
+    transition: opacity 0.2s ease;
+  }
+}

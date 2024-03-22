@@ -1,0 +1,113 @@
+.formContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; 
+  background: linear-gradient(120deg,#8a9eda 10%, #bdbec8 100%);
+
+  .formWrapper {
+    width: 100%;
+    max-width: 400px;
+    padding: 20px;
+    text-align: center;
+    background-color: transparent;
+    border-radius: 25px;
+    box-shadow: 0 0 10px rgba(147, 143, 143, 0.756);
+    img {
+      margin-top: 10px;
+      width: 200px;
+      margin-left: 25px;
+    }
+    .title {
+      margin: 20px 0;
+      font-size: 1.5rem;
+      font-weight: 600;
+      text-transform: uppercase;
+    }
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 30px;
+
+      input {
+        padding: 10px;
+        border: 1px solid #ddd;
+        border-radius: 5px;
+        font-size: large;
+        font-weight: 400;
+        outline: none;
+        width: 100%;
+        box-sizing: border-box;
+        &::placeholder {
+          color: #b2bfe5;
+        }
+        &:focus {
+          border: 2px solid #8a9eda;
+        }
+      }
+      p {
+        color: rgb(240, 187, 53);
+        font-size: 0.9rem;
+        font-weight: 200;
+        margin: 0;
+        width: fit-content;
+        cursor: pointer;
+      }
+
+      label {
+        text-align: left;
+        display: flex;
+        align-items: center;
+        gap: 15px;
+        width: fit-content;
+        padding-left: 15px;
+        cursor: pointer;
+      }
+
+      .passwordWrapper {
+        position: relative;
+        display: flex;
+        align-items: center;
+        gap: 15px;
+        input {
+          padding-right: 30px;
+        }
+        .eyeIcon {
+          position: absolute;
+          right: 10px;
+          cursor: pointer;
+        }
+      }
+
+      button {
+        padding: 10px;
+        border: none;
+        border-radius: 5px;
+        background-color: #385667;
+        color: #fff;
+        cursor: pointer;
+        transition: 0.3s;
+        &:hover {
+          background-color: #859adb;
+        }
+      }
+    }
+    label{
+      margin-left: 12px;
+      background-color: #8a9eda;
+      padding: 7px;
+      padding-right: 15px;
+      border-radius: 10px;
+    }
+    a {
+      text-decoration: none;
+      color: #2d4453;
+      transition: color 0.3s ease;
+      font-size: 1.05rem;
+      font-weight: 500;
+      &:hover {
+        color: #617b8d;
+      }
+    }
+  }
+}
